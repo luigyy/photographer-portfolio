@@ -2,7 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        customPulse: "customPulse 6s infinite",
+      },
+      keyframes: {
+        customPulse: {
+          "50%": {
+            opacity: ".2",
+          },
+        },
+      },
+      fontFamily: {
+        Cormorant: ["Cormorant Garamond", "sans serif"],
+      },
+    },
   },
   plugins: [],
 };
