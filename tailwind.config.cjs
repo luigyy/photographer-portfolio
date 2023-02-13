@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        customPulse: "customPulse 6s infinite",
+        customPulse: "customPulse 4s infinite",
       },
       keyframes: {
         customPulse: {
@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         Cormorant: ["Cormorant Garamond", "sans serif"],
+        main: ["Source Sans Pro", "sans-serif"],
       },
     },
   },
