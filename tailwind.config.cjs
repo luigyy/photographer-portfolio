@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        customPulse: "customPulse 4s infinite",
+        customPulse: "customPulse 3s infinite",
       },
       keyframes: {
         customPulse: {
