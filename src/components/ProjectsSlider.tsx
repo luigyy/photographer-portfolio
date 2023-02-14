@@ -2,7 +2,7 @@ import "./slider.css";
 interface ProjectsSliderProps {}
 
 const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
-  var slide = 10;
+  var slide = 20;
   var current = 0;
   function move(direction: "left" | "right") {
     const slider = document.getElementById("slider");
@@ -14,7 +14,7 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
     console.log(current);
     direction === "right"
       ? (current = Math.max((current -= slide), -50))
-      : (current = Math.min(((current += slide), 0)));
+      : (current = Math.min((current += slide), 0));
   }
 
   return (
@@ -41,10 +41,7 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
       </div>
 
       <div className="absolute mt-20 h-80 min-w-full">
-        <div
-          id="slider"
-          className="flex h-full w-full translate-x-28 gap-4  border-2 "
-        >
+        <div id="slider" className="flex h-full w-full translate-x-28 gap-4 ">
           <div className="h-full w-64">
             <img
               src="project1.jpg"
