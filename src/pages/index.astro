@@ -2,15 +2,19 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
-import SecondSection from "../components/SecondSection.astro";
+import FirstStrip from "../components/FirstStrip.astro";
+import SecondStrip from "../components/SecondStrip.astro";
 import ProjectSection from "../components/ProjectSection.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Portfolio">
   <main class="font-main">
     <Navbar />
     <Hero />
-    <SecondSection />
+    <FirstStrip />
     <ProjectSection />
+    <SecondStrip />
+    <About />
   </main>
 </Layout>
