@@ -26,13 +26,13 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
         <div className="flex gap-2 pt-14 pr-28">
           <button
             id="button-right"
-            className="rounded-full text-4xl text-white hover:text-[#e4b350]"
+            className=" rounded-full text-6xl text-white hover:text-[#e4b350]"
             onClick={() => move("left")}
           >
             ←
           </button>
           <button
-            className="rounded-full text-4xl text-white hover:text-[#e4b350]"
+            className=" rounded-full text-6xl text-white  duration-1000 hover:text-[#e4b350]"
             onClick={() => move("right")}
           >
             →

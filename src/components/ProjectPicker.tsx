@@ -3,6 +3,7 @@ import { useState } from "react";
 interface ProjectPickerProps {}
 
 const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
+  const [activeField, setActiveField] = useState("");
   //
   const changeImage = (id: string) => {
     const images = document.getElementsByClassName("img");
@@ -22,6 +23,9 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
     if (element) {
       element.dataset.status = "active";
     }
+
+    //set active field to change text color
+    setActiveField(id);
     return;
   };
   //
@@ -29,24 +33,77 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
     <div className="flex h-screen bg-[#181818]">
       <div className="flex h-screen w-1/2 flex-col items-start gap-1 pt-16 pl-28  font-Cormorant text-5xl text-[#454545]">
         <button
-          className="hover:text-white"
+          className={`hover:text-white ${
+            activeField === "model" ? "text-white" : ""
+          }`}
           onClick={() => changeImage("model")}
         >
           Model
         </button>
         <button
-          className="hover:text-white"
+          className={`hover:text-white ${
+            activeField === "fashion" ? "text-white" : ""
+          }`}
           onClick={() => changeImage("fashion")}
         >
           Fashion
         </button>
-        <button className="hover:text-white">Product</button>
-        <button className="hover:text-white">Landscape</button>
-        <button className="hover:text-white">Corporate</button>
-        <button className="hover:text-white">Architecture</button>
-        <button className="hover:text-white">Event Wedding</button>
-        <button className="hover:text-white">Health & Wellnes</button>
-        <button className="hover:text-white">Food & Restaurant</button>
+        <button
+          className={`hover:text-white ${
+            activeField === "product" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("product")}
+        >
+          Product
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "landscape" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("landscape")}
+        >
+          Landscape
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "corporate" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("corporate")}
+        >
+          Corporate
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "architecture" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("architecture")}
+        >
+          Architecture
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "event-wedding" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("event-wedding")}
+        >
+          Event Wedding
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "health-wellnes" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("health-wellnes")}
+        >
+          Health & Wellnes
+        </button>
+        <button
+          className={`hover:text-white ${
+            activeField === "food-restaurant" ? "text-white" : ""
+          }`}
+          onClick={() => changeImage("food-restaurant")}
+        >
+          Food & Restaurant
+        </button>
       </div>
       {/* right div  */}
       <div className="h-screen w-1/2">
