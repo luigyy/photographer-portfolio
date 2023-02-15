@@ -1,13 +1,12 @@
 .img {
   opacity: 100%;
-  transition: opacity 3s ease;
+  transition: opacity 1s ease-in-out;
 }
 
 .img[data-status="active"] {
-  border: 10px solid blue;
+  opacity: 100%;
 }
 
 .img[data-status="inactive"] {
-  border: 10px solid red;
   opacity: 0%;
 }
