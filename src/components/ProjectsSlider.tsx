@@ -26,13 +26,13 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
         <div className="flex gap-2 pt-14 pr-28">
           <button
             id="button-right"
-            className="rounded-full text-4xl text-white"
+            className="rounded-full text-4xl text-white hover:text-[#e4b350]"
             onClick={() => move("left")}
           >
             ←
           </button>
           <button
-            className="rounded-full text-4xl text-white"
+            className="rounded-full text-4xl text-white hover:text-[#e4b350]"
             onClick={() => move("right")}
           >
             →
@@ -42,49 +42,35 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
 
       <div className="absolute mt-20 h-80 min-w-full">
         <div id="slider" className="flex h-full w-full translate-x-28 gap-4 ">
-          <div className="h-full w-64">
+          <div className="info relative h-full w-64  backdrop-blur ">
             <img
               src="project1.jpg"
               className="h-full w-full object-cover"
               alt=""
             />
           </div>
-          <div className="h-full w-64">
+          <div className="info relative h-full w-64">
             <img
               src="project2.jpg"
               className="h-full w-full object-cover"
               alt=""
             />
           </div>
-          <div className="h-full w-64">
+          <div className="info relative h-full w-64">
             <img
               src="project3.jpg"
               className="h-full w-full object-cover"
               alt=""
             />
           </div>
-          <div className="h-full w-64">
+          <div className="info relative h-full w-64">
             <img
               src="project4.jpg"
               className="h-full w-full object-cover"
               alt=""
             />
           </div>
-          <div className="h-full w-64">
-            <img
-              src="project5.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="h-full w-64">
-            <img
-              src="project5.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="h-full w-64">
+          <div className="info relative h-full w-64">
             <img
               src="project5.jpg"
               className="h-full w-full object-cover"
