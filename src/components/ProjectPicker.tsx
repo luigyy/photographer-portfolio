@@ -108,19 +108,25 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
       {/* right div  */}
       <div className="h-screen w-1/2">
         <div className="relative mx-auto mt-14 h-[475px] w-[55%] overflow-y-clip">
-          <img
-            src="model.jpg"
-            data-status="inactive"
-            className=" img absolute"
-            id="model"
-          />
-          <img
-            src="fashion.jpg"
-            data-status="active"
-            className="img absolute"
-            id="fashion"
-          />
-
+          {[
+            "model",
+            "fashion",
+            "product",
+            "landscape",
+            "corporate",
+            "architecture",
+            "event-wedding",
+            "health-wellnes",
+            "food-restaurant",
+          ].map((item) => (
+            <img
+              src={`${item}.jpg`}
+              data-status="active"
+              className="img absolute"
+              alt={item}
+              id={item}
+            />
+          ))}
           <div className="absolute -left-6 top-36 h-14 w-14 rounded-full bg-[#ffbb25] ring-4 ring-[#181818]">
             <img
               src="arrow.png"
