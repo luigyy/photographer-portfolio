@@ -125,6 +125,8 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
               className="img absolute"
               alt={item}
               id={item}
+              loading="lazy"
+              key={item}
             />
           ))}
           <div className="absolute -left-6 top-36 h-14 w-14 rounded-full bg-[#ffbb25] ring-4 ring-[#181818]">
