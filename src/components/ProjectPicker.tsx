@@ -30,80 +30,28 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
   };
   //
   return (
-    <div className="flex h-screen bg-[#181818]">
+    <div className="flex h-[120vh] bg-[#181818] md:h-screen">
       <div className="flex h-screen w-1/2 flex-col items-start gap-1 pt-16 pl-28  font-Cormorant text-5xl text-[#454545]">
-        <button
-          className={`hover:text-white ${
-            activeField === "model" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("model")}
-        >
-          Model
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "fashion" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("fashion")}
-        >
-          Fashion
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "product" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("product")}
-        >
-          Product
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "landscape" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("landscape")}
-        >
-          Landscape
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "corporate" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("corporate")}
-        >
-          Corporate
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "architecture" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("architecture")}
-        >
-          Architecture
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "event-wedding" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("event-wedding")}
-        >
-          Event Wedding
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "health-wellnes" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("health-wellnes")}
-        >
-          Health & Wellnes
-        </button>
-        <button
-          className={`hover:text-white ${
-            activeField === "food-restaurant" ? "text-white" : ""
-          }`}
-          onClick={() => changeImage("food-restaurant")}
-        >
-          Food & Restaurant
-        </button>
+        {[
+          { id: "model", title: "Model" },
+          { id: "fashion", title: "Fashion" },
+          { id: "product", title: "Product" },
+          { id: "landscape", title: "Landscape" },
+          { id: "corporate", title: "Corporate" },
+          { id: "architecture", title: "Architecture" },
+          { id: "event-wedding", title: "Event & Wedding" },
+          { id: "health-wellnes", title: "Health & Wellnes" },
+          { id: "food-restaurant", title: "Food & Restaurant" },
+        ].map((item) => (
+          <button
+            className={`hover:text-white ${
+              activeField === item.id ? "text-white" : ""
+            }`}
+            onClick={() => changeImage(item.id)}
+          >
+            {item.title}
+          </button>
+        ))}
       </div>
       {/* right div  */}
       <div className="h-screen w-1/2">
