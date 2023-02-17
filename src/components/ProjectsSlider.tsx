@@ -41,41 +41,18 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
 
       <div className="absolute mt-20 h-80 min-w-full">
         <div id="slider" className="flex h-full w-full translate-x-28 gap-4 ">
-          <div className="info relative h-full w-64  backdrop-blur ">
-            <img
-              src="project1.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="info relative h-full w-64">
-            <img
-              src="project2.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="info relative h-full w-64">
-            <img
-              src="project3.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="info relative h-full w-64">
-            <img
-              src="project4.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
-          <div className="info relative h-full w-64">
-            <img
-              src="project5.jpg"
-              className="h-full w-full object-cover"
-              alt=""
-            />
-          </div>
+          {["project1", "project2", "project3", "project4", "project5"].map(
+            (item) => (
+              <div className="info relative h-full w-64  backdrop-blur ">
+                <img
+                  src={`${item}.jpg`}
+                  className="h-full w-full object-cover"
+                  alt=""
+                  loading="lazy"
+                />
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
