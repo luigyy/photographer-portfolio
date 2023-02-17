@@ -1,21 +1,26 @@
 <div class="h-[150vh] overflow-hidden bg-[#181818]">
   <div
-    class="mx-auto flex h-[450px] w-[70%] translate-y-96 overflow-hidden bg-[#2d2a24]"
+    class="mx-auto flex w-[90%] translate-y-96 flex-col items-center overflow-hidden bg-[#2d2a24] pb-10 md:h-[450px] md:w-[70%] md:flex-row"
   >
     <!-- img  -->
-    <div class="w-[40%]">
+    <div class="flex w-full justify-center md:h-full md:w-[40%]">
       <div
-        class={`relative ml-10 mt-5 w-[80%] 
-        before:absolute before:top-[30%] before:-right-10 before:h-14 before:w-14 before:rounded-full
+        class={`relative  md:ml-10  mt-5 md:h-full md:w-[80%] w-20  h-20 rounded-full md:rounded-none
+
+        before:hidden  md:before:inline md:before:absolute before:top-[30%] before:-right-10 before:h-14 before:w-14 before:rounded-full
       before:bg-red-500 before:bg-gradient-to-br before:from-purple-600 before:to-orange-400 
         before:ring-4 before:ring-[#2d2a24] before:content-['Hire'] before:text-white before:text-center
         before:pt-4 before:font-semibold`}
       >
-        <img src="photographer-description.jpg" class="" alt="" />
+        <img
+          src="photographer-description.jpg"
+          class="h-20 w-20 rounded-full object-cover object-center md:mx-0 md:h-auto md:w-full md:rounded-none"
+          alt=""
+        />
       </div>
     </div>
     <!-- text  -->
-    <div class="w-[60%] pl-14 pt-8 text-zinc-200">
+    <div class="mx-auto w-[90%] pt-8 text-zinc-200 md:mx-0 md:w-[60%] md:pl-14">
       <h1 class="text-3xl text-[#e4b350]">— Hello, I'm</h1>
       <h1 class="font-Cormorant text-6xl">Terence Tao</h1>
       <p class="mt-5 pr-10">

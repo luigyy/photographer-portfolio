@@ -11,7 +11,6 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
         ? (slider.style.transform = `translate(${current + slide}%)`)
         : (slider.style.transform = `translate(${current - slide}%)`);
     }
-    console.log(current);
     direction === "right"
       ? (current = Math.max((current -= slide), -50))
       : (current = Math.min((current += slide), 0));
@@ -20,10 +19,10 @@ const ProjectsSlider: React.FC<ProjectsSliderProps> = ({}) => {
   return (
     <div className="relative h-72 overflow-x-clip bg-[#2d2a24] font-main">
       <div className="flex items-center justify-between">
-        <h1 className="px-2 pl-28 pt-14 text-xl text-[#e4b350]/90">
+        <h1 className="px-2 pl-5 pt-14 text-xl text-[#e4b350]/90 md:pl-28">
           — My Recent Projects
         </h1>
-        <div className="flex gap-2 pt-14 pr-28">
+        <div className="flex gap-2 pt-14 pr-2 md:pr-28">
           <button
             id="button-right"
             className=" rounded-full text-6xl text-white hover:text-[#e4b350]"
