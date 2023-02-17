@@ -30,8 +30,8 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
   };
   //
   return (
-    <div className="flex h-[120vh] bg-[#181818] md:h-screen">
-      <div className="flex h-screen w-1/2 flex-col items-start gap-1 pt-16 pl-28  font-Cormorant text-5xl text-[#454545]">
+    <div className="flex h-[70vh] bg-[#181818] md:h-screen">
+      <div className="flex h-screen w-1/2 flex-col items-start gap-1 divide-y divide-zinc-50/10 pt-16 pl-4  font-Cormorant  text-2xl text-[#454545] md:divide-none md:pl-28 md:text-5xl">
         {[
           { id: "model", title: "Model" },
           { id: "fashion", title: "Fashion" },
@@ -44,7 +44,7 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
           { id: "food-restaurant", title: "Food & Restaurant" },
         ].map((item) => (
           <button
-            className={`hover:text-white ${
+            className={` text-left  hover:text-white ${
               activeField === item.id ? "text-white" : ""
             }`}
             onClick={() => changeImage(item.id)}
@@ -54,8 +54,8 @@ const ProjectPicker: React.FC<ProjectPickerProps> = ({}) => {
         ))}
       </div>
       {/* right div  */}
-      <div className="h-screen w-1/2">
-        <div className="relative mx-auto mt-14 h-[475px] w-[55%] overflow-y-clip">
+      <div className="h-screen  w-2/3  md:w-1/2  ">
+        <div className="relative mx-auto mt-14 h-[475px] w-[70%] overflow-y-clip md:w-[55%]">
           {[
             "model",
             "fashion",
