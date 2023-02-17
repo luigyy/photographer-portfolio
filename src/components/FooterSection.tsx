@@ -2,7 +2,7 @@ interface FooterSectionProps {}
 
 const FooterSection: React.FC<FooterSectionProps> = ({}) => {
   return (
-    <div className="  min-h-[63vh] overflow-hidden bg-[#2d2a24] md:min-h-[80vh]">
+    <div className="  min-h-[63vh] overflow-hidden bg-[#2d2a24]">
       <h1 className="pt-14 text-center text-3xl text-[#e4b350]">
         — Feel free to reach out
       </h1>
